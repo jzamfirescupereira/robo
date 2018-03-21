@@ -20,25 +20,24 @@ class Pattern {
         }
 };
 int i;
+Pattern Path[100];
+
 void setup() {
-  
-    Pattern Path[100];
     for (i = 0; i < 100; i++) {
-        Path[i].setdirect(random(1,4));
+        Path[i].setdirect(random(0,4));
     }
     for (i = 0; i < 100; i++) {
-        Path[i].setduration(random(1,4));
+        Path[i].setduration(random(0,4));
     }
     Serial.begin(9600);
     
-    
 }
 void loop() {
-  Pattern Path[100];
     for (i = 0; i < 100; i++) {
         Serial.println(Path[i].getdirect());
     }
     for (i = 0; i < 100; i++) {
         Serial.println(Path[i].getduration());
     }
+    
 }
